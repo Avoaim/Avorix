@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniglobe Secondary School - +2 Law Program</title>
+    <link rel="stylesheet" href="uniglobe-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #5d5c61;
+            --accent-color: #b1a296;
+            --light-bg: #f8f9fa;
+            --dark-text: #333;
+            --light-text: #555;
+            --justice-gold: #d4af37;
+        }
+        
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.7;
+            color: var(--dark-text);
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--justice-gold);
+        }
+        
+        h1 {
+            padding-top: 8%;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-top: 40px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--accent-color);
+            font-weight: 600;
+        }
+        
+        h3 {
+            color: var(--justice-gold);
+            font-size: 1.4rem;
+            margin-top: 30px;
+            background-color: rgba(42, 42, 42, 0.9);
+            padding: 12px 20px;
+            border-radius: 4px;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .highlight-box {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 5px solid var(--justice-gold);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-right: 1px solid #e0e0e0;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .subjects-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .grade-subjects {
+            flex: 1;
+            min-width: 280px;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-top: 4px solid var(--secondary-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .grade-subjects::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--justice-gold), var(--secondary-color));
+        }
+        
+        .subject-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        
+        .subject-list li {
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            background-color: var(--light-bg);
+            border-left: 3px solid var(--justice-gold);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            transition: transform 0.2s ease;
+        }
+        
+        .subject-list li:hover {
+            transform: translateX(5px);
+            background-color: #e8e8e8;
+        }
+        
+        .subject-list li:before {
+            content: "⚖";
+            margin-right: 12px;
+            color: var(--secondary-color);
+            font-size: 1.1em;
+        }
+        
+        @media (max-width: 768px) {
+            .subjects-container {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .grade-subjects {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="#" alt="Uniglobe Logo" class="logo">
+                <span class="logo-text">Uniglobe High School</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="aboutus.html" class="nav-link">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="aboutus.html">About Uniglobe</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="academicprograms.html" class="nav-link">Academic Program </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="science.html">Science</a></li>
+                        <li><a href="management.html">Management</a></li>
+                        <li><a href="law.html">Law</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="team.html" class="nav-link">Our Team </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="team.html">Heads of Departments</a></li>
+                        <li><a href="team.html">Administration</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="facilities.html" class="nav-link">Facilities</a></li>
+                <li class="nav-item"><a href="mis.html" class="nav-link">MIS</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="header">
+            <h1>Explore by Learning</h1>
+        </div>
+        
+        <div class="highlight-box">
+            <p>Uniglobe Secondary School's +2 Law program ignites a passion for justice in aspiring legal minds. Fueled by a desire to understand the intricate workings of the legal system, students start on a comprehensive journey that equips them with the foundation to thrive in the dynamic world of law. Led by seasoned legal professionals with real-world courtroom experience, the program delves beyond mere theory. Students actively engage with the law through interactive case studies, mock trials, and legal simulations, solidifying their understanding and fostering practical application.</p>
+            
+            <p>Uniglobe's modern classrooms provide a stimulating environment for legal exploration. Here, students hone their critical thinking and analytical skills through thought-provoking debates and collaborative projects. They delve into the art of persuasive communication, strategic legal reasoning, and the importance of upholding ethical principles – hallmarks of a successful legal career. As students navigate the complexities of constitutional law, criminal justice, and legal procedure, they gain a solid foundation for pursuing a law degree and becoming the next generation of advocates and legal minds.</p>
+        </div>
+        
+        <h2>Course Composition in +2 Law</h2>
+        
+        <div class="subjects-container">
+            <div class="grade-subjects">
+                <h3>GRADE XI</h3>
+                <ul class="subject-list">
+                    <li>Comp. English</li>
+                    <li>Comp. Nepali</li>
+                    <li>Social Studies and Life Skills Education</li>
+                    <li>Jurisprudence and Legal Theories</li>
+                    <li>Procedural Law</li>
+                    <li>Constitutional Law</li>
+                </ul>
+            </div>
+            
+            <div class="grade-subjects">
+                <h3>GRADE XII</h3>
+                <ul class="subject-list">
+                    <li>Comp. English</li>
+                    <li>Comp. Nepali</li>
+                    <li>Social Studies and Life Skills Education</li>
+                    <li>Nepalese Legal System</li>
+                    <li>Legal Drafting</li>
+                    <li>Civil and Criminal Law and Justice</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Uniglobe High School</h4>
+                    <p>Excellence in Education</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@uniglobe.edu.np</p>
+                    <p>Phone: +977-1-XXXXXXX</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Uniglobe High School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

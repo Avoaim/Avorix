@@ -9,6 +9,27 @@
 </head>
 
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-container">
+            <div class="loading-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <h2>Uniglobe MIS</h2>
+            </div>
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+            </div>
+            <div class="loading-text">
+                <p>Loading Management Information System...</p>
+                <div class="loading-progress">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="main-content">
          <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -21,16 +42,17 @@
                     <a href="aboutus.html" class="nav-link">About Us</a>
                     <ul class="dropdown-menu">
                         <li><a href="aboutus.html">About Uniglobe</a></li>
+                        <li><a href="resource.html">Resources</a></li>
+                        <li><a href="philosophy.html">Our Philosophy</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="academicprograms.html" class="nav-link">Academic Program <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="academicprograms.html">Science</a></li>
-                        <li><a href="academicprograms.html">Management</a></li>
-                        <li><a href="academicprograms.html">Law</a></li>
+                        <li><a href="science.html">Science</a></li>
+                        <li><a href="management.html">Management</a></li>
+                        <li><a href="law.html">Law</a></li>
                     </ul>
-                </li>
                 <li class="nav-item dropdown">
                     <a href="team.html" class="nav-link">Our Team <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
@@ -54,11 +76,40 @@
         </div>
     </nav>
 
+    <!-- MIS Hero Section -->
+    <section class="mis-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h1 class="hero-title">Management Information System</h1>
+                <p class="hero-subtitle">Secure, efficient, and user-friendly portal for the Uniglobe community</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure Access</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-clock"></i>
+                        <span>24/7 Available</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <span>Multi-User</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="mis" class="section">
         <div class="container">
-            <h2 class="section-title">Management Information System (MIS)</h2>
             <div class="mis-content">
-                <p class="mis-description">Access our secure portal for students, teachers, and administrators.</p>
+                <div class="section-header">
+                    <h2 class="section-title">Choose Your Portal</h2>
+                    <p class="section-description">Select your role to access the appropriate dashboard and tools</p>
+                </div>
                 <div class="login-panels">
                     <div class="login-panel" data-role="students">
                         <div class="panel-icon">
@@ -103,8 +154,13 @@
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Login</button>
+                 <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me<br><br>
+    </label>
+                <button type="submit" class="btn btn-primary" value="submit" onclick="login()">Login</button>
+
             </form>
+            <span class="psw">Forgot <a href="#">Password?</a></span>
         </div>
     </div>
 
@@ -134,6 +190,66 @@
             </div>
         </div>
     </footer>
+    </div> <!-- End main-content -->
+
+    <script>
+        // Loading Screen Logic
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            const mainContent = document.getElementById('main-content');
+            const progressBar = document.querySelector('.progress-bar');
+            
+            // Simulate loading progress
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += Math.random() * 15;
+                if (progress >= 100) {
+                    progress = 100;
+                    clearInterval(interval);
+                    
+                    // Hide loading screen and show main content
+                    setTimeout(() => {
+                        loadingScreen.style.opacity = '0';
+                        setTimeout(() => {
+                            loadingScreen.style.display = 'none';
+                            mainContent.style.opacity = '1';
+                            mainContent.style.visibility = 'visible';
+                        }, 500);
+                    }, 500);
+                }
+                progressBar.style.width = progress + '%';
+            }, 100);
+        });
+
+        // Enhanced Login Function
+        function login(){
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const loginBtn = document.querySelector('#login-form button[type="submit"]');
+            
+            // Add loading state to button
+            loginBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Logging in...';
+            loginBtn.disabled = true;
+            
+            // Simulate authentication delay
+            setTimeout(() => {
+                if(username == "student" && password == "student123") {
+                    loginBtn.innerHTML = '<i class="fas fa-check"></i> Success!';
+                    setTimeout(() => {
+                        window.location.href="./dashboard.html";
+                    }, 1000);
+                } else {
+                    loginBtn.innerHTML = '<i class="fas fa-times"></i> Invalid credentials';
+                    loginBtn.style.background = '#e74c3c';
+                    setTimeout(() => {
+                        loginBtn.innerHTML = 'Login';
+                        loginBtn.disabled = false;
+                        loginBtn.style.background = '';
+                    }, 2000);
+                }
+            }, 1500);
+        }
+    </script>
 
     <script src="uniglobe-script.js"></script>
 </body>

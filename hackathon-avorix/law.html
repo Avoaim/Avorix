@@ -6,161 +6,6 @@
     <title>Uniglobe Secondary School - +2 Law Program</title>
     <link rel="stylesheet" href="uniglobe-styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #5d5c61;
-            --accent-color: #b1a296;
-            --light-bg: #f8f9fa;
-            --dark-text: #333;
-            --light-text: #555;
-            --justice-gold: #d4af37;
-        }
-        
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            line-height: 1.7;
-            color: var(--dark-text);
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 30px 20px;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid var(--justice-gold);
-        }
-        
-        h1 {
-            padding-top: 8%;
-            color: var(--primary-color);
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
-        }
-        
-        h2 {
-            color: var(--primary-color);
-            font-size: 1.8rem;
-            margin-top: 40px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--accent-color);
-            font-weight: 600;
-        }
-        
-        h3 {
-            color: var(--justice-gold);
-            font-size: 1.4rem;
-            margin-top: 30px;
-            background-color: rgba(42, 42, 42, 0.9);
-            padding: 12px 20px;
-            border-radius: 4px;
-            display: inline-block;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
-        
-        .highlight-box {
-            background-color: white;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 30px 0;
-            border-left: 5px solid var(--justice-gold);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            border-right: 1px solid #e0e0e0;
-            border-top: 1px solid #e0e0e0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .subjects-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin: 30px 0;
-        }
-        
-        .grade-subjects {
-            flex: 1;
-            min-width: 280px;
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            border-top: 4px solid var(--secondary-color);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .grade-subjects::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--justice-gold), var(--secondary-color));
-        }
-        
-        .subject-list {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 20px;
-        }
-        
-        .subject-list li {
-            padding: 12px 15px;
-            margin-bottom: 10px;
-            background-color: var(--light-bg);
-            border-left: 3px solid var(--justice-gold);
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            transition: transform 0.2s ease;
-        }
-        
-        .subject-list li:hover {
-            transform: translateX(5px);
-            background-color: #e8e8e8;
-        }
-        
-        .subject-list li:before {
-            content: "⚖";
-            margin-right: 12px;
-            color: var(--secondary-color);
-            font-size: 1.1em;
-        }
-        
-        @media (max-width: 768px) {
-            .subjects-container {
-                flex-direction: column;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            h2 {
-                font-size: 1.5rem;
-            }
-            
-            .grade-subjects {
-                padding: 20px;
-            }
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -175,6 +20,7 @@
                     <a href="aboutus.html" class="nav-link">About Us</a>
                     <ul class="dropdown-menu">
                         <li><a href="aboutus.html">About Uniglobe</a></li>
+                        <li><a href="resource.html">Resources</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -207,7 +53,7 @@
             </div>
         </div>
     </nav>
-    <div class="container">
+    <div class="container law-container">
         <div class="header">
             <h1>Explore by Learning</h1>
         </div>
@@ -273,5 +119,6 @@
             </div>
         </div>
     </footer>
+    <script src="uniglobe-script.js"></script>
 </body>
 </html>

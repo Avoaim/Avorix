@@ -4,143 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uniglobe Secondary School - +2 Management Program</title>
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --light-bg: #f8f9fa;
-            --dark-text: #333;
-            --light-text: #555;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.7;
-            color: var(--dark-text);
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 30px 20px;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid var(--secondary-color);
-        }
-        
-        h1 {
-            padding-top: 8%;
-            color: var(--primary-color);
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-        
-        h2 {
-            color: var(--primary-color);
-            font-size: 1.8rem;
-            margin-top: 40px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        h3 {
-            color: var(--accent-color);
-            font-size: 1.4rem;
-            margin-top: 30px;
-            background-color: rgba(231, 76, 60, 0.1);
-            padding: 10px 15px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        
-        p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
-        
-        .highlight-box {
-            background-color: var(--light-bg);
-            padding: 25px;
-            border-radius: 8px;
-            margin: 30px 0;
-            border-left: 5px solid var(--secondary-color);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .subjects-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin: 30px 0;
-        }
-        
-        .grade-subjects {
-            flex: 1;
-            min-width: 280px;
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--accent-color);
-        }
-        
-        .subject-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        
-        .subject-list li {
-            padding: 12px 15px;
-            margin-bottom: 10px;
-            background-color: var(--light-bg);
-            border-left: 3px solid var(--secondary-color);
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-        }
-        
-        .subject-list li:before {
-            content: "➤";
-            margin-right: 10px;
-            color: var(--accent-color);
-        }
-        
-        .subject-category {
-            font-weight: bold;
-            color: var(--primary-color);
-            margin: 20px 0 12px 0;
-            font-size: 1.1rem;
-            display: inline-block;
-            padding-bottom: 5px;
-            border-bottom: 2px dotted var(--secondary-color);
-        }
-        
-        @media (max-width: 768px) {
-            .subjects-container {
-                flex-direction: column;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            h2 {
-                font-size: 1.5rem;
-            }
-            
-            .grade-subjects {
-                padding: 20px;
-            }
-        }
-    </style>
+
     <link rel="stylesheet" href="uniglobe-styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -157,14 +21,16 @@
                     <a href="aboutus.html" class="nav-link">About Us</a>
                     <ul class="dropdown-menu">
                         <li><a href="aboutus.html">About Uniglobe</a></li>
+                        <li><a href="resource.html">Resources</a></li>
+                        <li><a href="philosophy.html">Our Philosophy</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="academicprograms.html" class="nav-link">Academic Program <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="academicprograms.html">Science</a></li>
-                        <li><a href="academicprograms.html">Management</a></li>
-                        <li><a href="academicprograms.html">Law</a></li>
+                        <li><a href="science.html">Science</a></li>
+                        <li><a href="management.html">Management</a></li>
+                        <li><a href="law.html">Law</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -189,7 +55,7 @@
             </div>
         </div>
     </nav>
-    <div class="container">
+    <div class="container management-container">
         <div class="header">
             <h1>Explore by Learning</h1>
         </div>
@@ -283,5 +149,6 @@
             </div>
         </div>
     </footer>
+    <script src="uniglobe-script.js"></script>
 </body>
 </html>

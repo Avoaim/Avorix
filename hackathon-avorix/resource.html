@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources & Facilities | Uniglobe High School</title>
+    <link rel="stylesheet" href="uniglobe-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Facilities Page Specific Styles */
+        .facilities-hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .facilities-hero h1 {
+            padding-top: 8%;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease;
+        }
+        
+        .facilities-hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease 0.3s forwards;
+            opacity: 0;
+        }
+        
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .facility-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .facility-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .facility-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .facility-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .facility-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .facility-card:hover .facility-image::after {
+            background: rgba(0,0,0,0.1);
+        }
+        
+        .facility-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .facility-content h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .facility-content p {
+            color: #7f8c8d;
+        }
+        
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Delays for cards */
+        .facility-card:nth-child(1) { transition-delay: 0.1s; }
+        .facility-card:nth-child(2) { transition-delay: 0.2s; }
+        .facility-card:nth-child(3) { transition-delay: 0.3s; }
+        .facility-card:nth-child(4) { transition-delay: 0.4s; }
+        .facility-card:nth-child(5) { transition-delay: 0.5s; }
+        .facility-card:nth-child(6) { transition-delay: 0.6s; }
+        .facility-card:nth-child(7) { transition-delay: 0.7s; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="#" alt="Uniglobe Logo" class="logo">
+                <span class="logo-text">Uniglobe High School</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="aboutus.html" class="nav-link">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="aboutus.html">About Uniglobe</a></li>
+                        <li><a href="resource.html">Resources</a></li>
+                        <li><a href="philosophy.html">Our Philosophy</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="academicprograms.html" class="nav-link">Academic Program <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="science.html">Science</a></li>
+                        <li><a href="management.html">Management</a></li>
+                        <li><a href="law.html">Law</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="team.html" class="nav-link">Our Team <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="team.html">Heads of Departments</a></li>
+                        <li><a href="team.html">Administration</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="facilities.html" class="nav-link active">Facilities</a></li>
+                <li class="nav-item"><a href="mis.html" class="nav-link">MIS</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="facilities-hero">
+        <div class="container">
+            <h1>RESOURCES & FACILITIES</h1>
+            <p>Most Appealing Pennies - Where Learning Comes to Life</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="facilities-grid">
+            <div class="facility-card">
+                <div class="facility-image" style="background-image: url('https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="facility-content">
+                    <h3>Confidence Hall</h3>
+                    <p>Our state-of-the-art auditorium for events and presentations</p>
+                </div>
+            </div>
+            
+            <div class="facility-card">
+                <div class="facility-image" style="background-image: url('https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="facility-content">
+                    <h3>Library</h3>
+                    <p>Extensive collection of books and quiet study spaces</p>
+                </div>
+            </div>
+            
+            <div class="facility-card">
+                <div class="facility-image" style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="facility-content">
+                    <h3>Computer Lab</h3>
+                    <p>Modern computing facilities with latest technology</p>
+                </div>
+            </div>
+            
+
+            <div class="facility-card">
+                <div class="facility-image" style="background-image: url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="facility-content">
+                    <h3>Sports Facilities</h3>
+                    <p>Excellent sports amenities for physical development</p>
+                </div>
+            </div>
+            
+            <div class="facility-card">
+                <div class="facility-image" style="background-image: url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="facility-content">
+                    <h3>Transportation</h3>
+                    <p>Safe and reliable school transportation services</p>
+                </div>
+            </div>
+            
+            <div class="facility-card">
+                <div class="facility-image" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="facility-content">
+                    <h3>Class Rooms</h3>
+                    <p>Modern, well-equipped learning environments</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Uniglobe High School</h4>
+                    <p>Excellence in Education</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@uniglobe.edu.np</p>
+                    <p>Phone: +977-1-XXXXXXX</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Uniglobe High School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+<script src="uniglobe-script.js"></script>
+</body>
+</html>

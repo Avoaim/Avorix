@@ -1,0 +1,565 @@
+/* Department Badge Base Styles */
+.department-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 10;
+}
+
+.department-badge:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Department Badge Colors */
+.department-badge.activities {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+}
+
+.department-badge.it {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+}
+
+.department-badge.irc {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    color: white;
+}
+
+.department-badge.health {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+}
+
+.department-badge.finance {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+}
+
+.department-badge.exam {
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    color: white;
+}
+
+.department-badge.administration {
+    background: linear-gradient(135deg, #374151, #1f2937);
+    color: white;
+}
+
+.department-badge.documentation {
+    background: linear-gradient(135deg, #6b7280, #4b5563);
+    color: white;
+}
+
+.department-badge.sports {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+    color: white;
+}
+
+/* Member Department Container Spacing */
+.member-department {
+    padding: 0.5rem 0;
+    margin: 0.75rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+/* Department Groups */
+.department-group {
+    margin-bottom: 3rem;
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.department-group:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px var(--shadow-hover);
+}
+
+.group-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+    position: relative;
+}
+
+.group-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+}
+
+.group-title i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.leadership-grid,
+.program-grid,
+.exam-grid,
+.finance-grid,
+.activities-grid,
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Responsive adjustments for department groups */
+@media (max-width: 768px) {
+    .department-group {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .group-title {
+        font-size: 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .leadership-grid,
+    .program-grid,
+    .exam-grid,
+    .finance-grid,
+    .activities-grid,
+    .support-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .department-badge {
+        font-size: 0.65rem;
+        padding: 0.3rem 0.6rem;
+        border-radius: 15px;
+        top: 12px;
+        right: 12px;
+    }
+    
+    .member-department {
+        padding: 0.4rem 0;
+        margin: 0.6rem 0;
+        gap: 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .department-group {
+        padding: 1rem;
+        border-radius: 15px;
+    }
+    
+    .group-title {
+        font-size: 1.3rem;
+    }
+    
+    .department-badge {
+        font-size: 0.6rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 12px;
+        letter-spacing: 0.3px;
+        top: 10px;
+        right: 10px;
+    }
+    
+    .member-department {
+        padding: 0.3rem 0;
+        margin: 0.5rem 0;
+        gap: 0.5rem;
+    }
+}
+
+/* Member Photo Styles */
+.member-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.member-avatar {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.member-avatar:hover .member-photo {
+    transform: scale(1.05);
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+}
+
+/* Stream Title Styling */
+.stream-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 2rem 0 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.2rem 1.8rem;
+    background: linear-gradient(135deg, var(--card-bg), rgba(46, 204, 113, 0.05));
+    border-radius: 15px;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 4px 15px var(--shadow-color);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stream-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.stream-title:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--shadow-hover);
+    background: linear-gradient(135deg, var(--card-bg), rgba(46, 204, 113, 0.08));
+}
+
+.stream-title i {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    padding: 0.5rem;
+    background: rgba(46, 204, 113, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.stream-title:hover i {
+    background: rgba(46, 204, 113, 0.15);
+    transform: scale(1.1);
+}
+
+/* Consistent Dark Theme for All Member Cards */
+.member-card {
+    background: linear-gradient(145deg, #1a1a1a, #2d2d2d) !important;
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(52, 152, 219, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+    border-color: rgba(52, 152, 219, 0.7);
+    background: linear-gradient(145deg, #1f1f1f, #333333) !important;
+}
+
+/* Special styling for Leadership & Program Directors */
+.leadership-grid .member-card,
+.program-grid .member-card {
+    border-radius: 25px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+}
+
+.leadership-grid .member-card:hover,
+.program-grid .member-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* Top accent line for all cards */
+.member-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    border-radius: 20px 20px 0 0;
+}
+
+.leadership-grid .member-card::before,
+.program-grid .member-card::before {
+    border-radius: 25px 25px 0 0;
+}
+
+/* Universal text styling for dark cards */
+.member-card .member-name {
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.member-card .member-position {
+    color: #2ecc71 !important;
+    font-weight: 600;
+}
+
+.member-card .credential {
+    background: rgba(52, 152, 219, 0.2) !important;
+    color: #ecf0f1 !important;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.member-card .contact-btn {
+    background: rgba(52, 152, 219, 0.2) !important;
+    border: 2px solid rgba(52, 152, 219, 0.4) !important;
+    color: #3498db !important;
+}
+
+.member-card .contact-btn:hover {
+    background: #3498db !important;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+/* Large Professional Avatar for Leadership */
+.leadership-grid .member-avatar.administration,
+.program-grid .member-avatar.administration {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 50%;
+    position: relative;
+    background: linear-gradient(145deg, #3498db, #2ecc71);
+    padding: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+}
+
+.leadership-grid .member-avatar.administration:hover,
+.program-grid .member-avatar.administration:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(52, 152, 219, 0.4);
+}
+
+.leadership-grid .member-photo,
+.program-grid .member-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+/* Professional Text Styling */
+.leadership-grid .member-name,
+.program-grid .member-name {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.leadership-grid .member-position,
+.program-grid .member-position {
+    color: #2ecc71;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.leadership-grid .member-credentials,
+.program-grid .member-credentials {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.leadership-grid .credential,
+.program-grid .credential {
+    background: rgba(52, 152, 219, 0.2);
+    color: #ecf0f1;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.leadership-grid .member-contact,
+.program-grid .member-contact {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.leadership-grid .contact-btn,
+.program-grid .contact-btn {
+    background: rgba(52, 152, 219, 0.2);
+    border: 2px solid rgba(52, 152, 219, 0.4);
+    color: #3498db;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.leadership-grid .contact-btn:hover,
+.program-grid .contact-btn:hover {
+    background: #3498db;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+/* Hide department badges for leadership cards */
+.leadership-grid .department-badge,
+.program-grid .department-badge,
+.leadership-grid .status-indicator,
+.program-grid .status-indicator {
+    display: none;
+}
+
+/* Responsive Design for Leadership Cards */
+@media (max-width: 768px) {
+    .leadership-grid .member-card,
+    .program-grid .member-card {
+        padding: 2rem 1.5rem;
+        border-radius: 20px;
+    }
+    
+    .leadership-grid .member-avatar.administration,
+    .program-grid .member-avatar.administration {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 1.2rem;
+    }
+    
+    .leadership-grid .member-name,
+    .program-grid .member-name {
+        font-size: 1.2rem;
+    }
+    
+    .leadership-grid .member-position,
+    .program-grid .member-position {
+        font-size: 0.9rem;
+    }
+    
+    .leadership-grid .contact-btn,
+    .program-grid .contact-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .stream-title {
+        font-size: 1.4rem;
+        padding: 1rem 1.5rem;
+        margin: 1.5rem 0 1rem 0;
+    }
+    
+    .stream-title i {
+        font-size: 1.2rem;
+        padding: 0.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .leadership-grid .member-card,
+    .program-grid .member-card {
+        padding: 1.5rem 1rem;
+        border-radius: 15px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .leadership-grid .member-avatar.administration,
+    .program-grid .member-avatar.administration {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 1rem;
+        padding: 6px;
+    }
+    
+    .leadership-grid .member-name,
+    .program-grid .member-name {
+        font-size: 1.1rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .leadership-grid .member-position,
+    .program-grid .member-position {
+        font-size: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .leadership-grid .credential,
+    .program-grid .credential {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+    }
+    
+    .leadership-grid .contact-btn,
+    .program-grid .contact-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+    
+    .leadership-grid .member-contact,
+    .program-grid .member-contact {
+        gap: 0.8rem;
+    }
+    
+    .stream-title {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.2rem;
+        margin: 1rem 0 0.8rem 0;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .stream-title i {
+        font-size: 1.1rem;
+        padding: 0.3rem;
+    }
+}

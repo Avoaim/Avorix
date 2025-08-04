@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniglobe Secondary School - Student Clubs</title>
+    <link rel="stylesheet" href="uniglobe-styles.css">
+    <link rel="stylesheet" href="clubs-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="Uniglobelogo.png" alt="Uniglobe Logo" class="logo">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="aboutus.html" class="nav-link">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="aboutus.html">About Uniglobe</a></li>
+                        <li><a href="resource.html">Resources</a></li>
+                        <li><a href="philosophy.html">Our Philosophy</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="academicprograms.html" class="nav-link">Academic Program <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="science.html">Science</a></li>
+                        <li><a href="management.html">Management</a></li>
+                        <li><a href="law.html">Law</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="team.html" class="nav-link">Our Team <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="team.html">Heads of Departments</a></li>
+                        <li><a href="team.html">Administration</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="facilities.html" class="nav-link">Facilities</a></li>
+                <li class="nav-item"><a href="clubs.html" class="nav-link active">Clubs</a></li>
+                <li class="nav-item"><a href="mis.html" class="nav-link">MIS</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="clubs-container">
+        <div class="clubs-header">
+            <h1>Student Clubs & Organizations</h1>
+            <p class="clubs-subtitle">Discover your passion and connect with like-minded peers through our diverse range of student clubs</p>
+        </div>
+
+        <div class="clubs-content">
+            <div class="clubs-grid">
+                
+                <!-- IT Club -->
+                <div class="club-card" data-category="technology">
+                    <div class="club-icon">
+                        <img src="photo/itclub.jpg" alt="IT Club" class="club-image">
+                    </div>
+                    <div class="club-info">
+                        <h3 class="club-name">Uniglobe IT Club</h3>
+                        <p class="club-description">Explore the world of technology, programming, and digital innovation. Join us for coding workshops, tech talks, and exciting projects that shape the future.</p>
+                        <div class="club-tags">
+                            <span class="tag tech">Programming</span>
+                            <span class="tag tech">Innovation</span>
+                            <span class="tag tech">Workshops</span>
+                        </div>
+                        <div class="club-stats">
+                            <span class="stat">
+                                <i class="fas fa-users"></i>
+                                50+ Members
+                            </span>
+                            <span class="stat">
+                                <i class="fas fa-calendar"></i>
+                                Weekly Meetings
+                            </span>
+                        </div>
+                        <button class="join-btn">
+                            <i class="fas fa-plus"></i>
+                            Join Club
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Trio's Club -->
+                <div class="club-card" data-category="social">
+                    <div class="club-icon">
+                        <img src="photo/triosclub.jpg" alt="Trio's Club" class="club-image">
+                    </div>
+                    <div class="club-info">
+                        <h3 class="club-name">Uniglobe Trio's Club</h3>
+                        <p class="club-description">The Trio's Club brings together students for collaborative activities, team building, and social events. Build lasting friendships and develop leadership skills.</p>
+                        <div class="club-tags">
+                            <span class="tag social">Teamwork</span>
+                            <span class="tag social">Leadership</span>
+                            <span class="tag social">Events</span>
+                        </div>
+                        <div class="club-stats">
+                            <span class="stat">
+                                <i class="fas fa-users"></i>
+                                75+ Members
+                            </span>
+                            <span class="stat">
+                                <i class="fas fa-calendar"></i>
+                                Bi-weekly
+                            </span>
+                        </div>
+                        <button class="join-btn">
+                            <i class="fas fa-plus"></i>
+                            Join Club
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Literary Club -->
+                <div class="club-card" data-category="academic">
+                    <div class="club-icon">
+                        <img src="photo/literaryclub.jpg" alt="Literary Club" class="club-image">
+                    </div>
+                    <div class="club-info">
+                        <h3 class="club-name">Uniglobe Literary Club</h3>
+                        <p class="club-description">Dive into the world of literature, creative writing, and poetry. Share your thoughts, participate in book discussions, and enhance your writing skills.</p>
+                        <div class="club-tags">
+                            <span class="tag academic">Writing</span>
+                            <span class="tag academic">Literature</span>
+                            <span class="tag academic">Poetry</span>
+                        </div>
+                        <div class="club-stats">
+                            <span class="stat">
+                                <i class="fas fa-users"></i>
+                                40+ Members
+                            </span>
+                            <span class="stat">
+                                <i class="fas fa-calendar"></i>
+                                Weekly
+                            </span>
+                        </div>
+                        <button class="join-btn">
+                            <i class="fas fa-plus"></i>
+                            Join Club
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Orders Club -->
+                <div class="club-card" data-category="service">
+                    <div class="club-icon">
+                        <img src="photo/ordersclub.jpg" alt="Orders Club" class="club-image">
+                    </div>
+                    <div class="club-info">
+                        <h3 class="club-name">Uniglobe Orders Club</h3>
+                        <p class="club-description">Dedicated to community service and organizing school events. Help make a difference in our community while developing organizational and leadership skills.</p>
+                        <div class="club-tags">
+                            <span class="tag service">Community Service</span>
+                            <span class="tag service">Organization</span>
+                            <span class="tag service">Events</span>
+                        </div>
+                        <div class="club-stats">
+                            <span class="stat">
+                                <i class="fas fa-users"></i>
+                                35+ Members
+                            </span>
+                            <span class="stat">
+                                <i class="fas fa-calendar"></i>
+                                Monthly
+                            </span>
+                        </div>
+                        <button class="join-btn">
+                            <i class="fas fa-plus"></i>
+                            Join Club
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Social Club UGSS -->
+                <div class="club-card" data-category="social">
+                    <div class="club-icon">
+                        <img src="photo/socialclub.jpg" alt="Social Club" class="club-image">
+                    </div>
+                    <div class="club-info">
+                        <h3 class="club-name">The Social Club UGSS</h3>
+                        <p class="club-description">Uniglobe Social Club focuses on cultural exchange, social awareness, and community engagement. Join us for social initiatives and cultural celebrations.</p>
+                        <div class="club-tags">
+                            <span class="tag social">Cultural</span>
+                            <span class="tag social">Awareness</span>
+                            <span class="tag social">Community</span>
+                        </div>
+                        <div class="club-stats">
+                            <span class="stat">
+                                <i class="fas fa-users"></i>
+                                60+ Members
+                            </span>
+                            <span class="stat">
+                                <i class="fas fa-calendar"></i>
+                                Bi-weekly
+                            </span>
+                        </div>
+                        <button class="join-btn">
+                            <i class="fas fa-plus"></i>
+                            Join Club
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sports Club -->
+                <div class="club-card" data-category="sports">
+                    <div class="club-icon">
+                        <img src="photo/sportsclub.jpg" alt="Sports Club" class="club-image">
+                    </div>
+                    <div class="club-info">
+                        <h3 class="club-name">Uniglobe Sports Club</h3>
+                        <p class="club-description">Stay active and competitive with our sports club. Participate in various sports activities, tournaments, and fitness programs to maintain a healthy lifestyle.</p>
+                        <div class="club-tags">
+                            <span class="tag sports">Athletics</span>
+                            <span class="tag sports">Fitness</span>
+                            <span class="tag sports">Tournaments</span>
+                        </div>
+                        <div class="club-stats">
+                            <span class="stat">
+                                <i class="fas fa-users"></i>
+                                80+ Members
+                            </span>
+                            <span class="stat">
+                                <i class="fas fa-calendar"></i>
+                                Daily Training
+                            </span>
+                        </div>
+                        <button class="join-btn">
+                            <i class="fas fa-plus"></i>
+                            Join Club
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Interact Club -->
+                <div class="club-card" data-category="service">
+                    <div class="club-icon">
+                        <img src="photo/interactclub.jpg" alt="Interact Club" class="club-image">
+                    </div>
+                    <div class="club-info">
+                        <h3 class="club-name">IC Uniglobe Interact Club</h3>
+                        <p class="club-description">Part of Rotary International's youth program, focusing on community service, international understanding, and leadership development through meaningful projects.</p>
+                        <div class="club-tags">
+                            <span class="tag service">Rotary</span>
+                            <span class="tag service">International</span>
+                            <span class="tag service">Leadership</span>
+                        </div>
+                        <div class="club-stats">
+                            <span class="stat">
+                                <i class="fas fa-users"></i>
+                                45+ Members
+                            </span>
+                            <span class="stat">
+                                <i class="fas fa-calendar"></i>
+                                Bi-weekly
+                            </span>
+                        </div>
+                        <button class="join-btn">
+                            <i class="fas fa-plus"></i>
+                            Join Club
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Model United Nations -->
+                <div class="club-card" data-category="academic">
+                    <div class="club-icon">
+                        <img src="photo/mun.jpg" alt="Model United Nations" class="club-image">
+                    </div>
+                    <div class="club-info">
+                        <h3 class="club-name">Uniglobe Model United Nations</h3>
+                        <p class="club-description">Engage in diplomatic simulations, debate global issues, and develop public speaking skills. Experience international relations and diplomacy firsthand.</p>
+                        <div class="club-tags">
+                            <span class="tag academic">Diplomacy</span>
+                            <span class="tag academic">Debate</span>
+                            <span class="tag academic">Global Issues</span>
+                        </div>
+                        <div class="club-stats">
+                            <span class="stat">
+                                <i class="fas fa-users"></i>
+                                30+ Members
+                            </span>
+                            <span class="stat">
+                                <i class="fas fa-calendar"></i>
+                                Weekly
+                            </span>
+                        </div>
+                        <button class="join-btn">
+                            <i class="fas fa-plus"></i>
+                            Join Club
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Theater Club -->
+                <div class="club-card" data-category="arts">
+                    <div class="club-icon">
+                        <img src="photo/thinktank.jpg" alt="Theater Club" class="club-image">
+                    </div>
+                    <div class="club-info">
+                        <h3 class="club-name">Theater Club</h3>
+                        <p class="club-description">Express yourself through drama, acting, and theatrical performances. Develop confidence, creativity, and stage presence through various productions and workshops.</p>
+                        <div class="club-tags">
+                            <span class="tag arts">Acting</span>
+                            <span class="tag arts">Drama</span>
+                            <span class="tag arts">Performance</span>
+                        </div>
+                        <div class="club-stats">
+                            <span class="stat">
+                                <i class="fas fa-users"></i>
+                                25+ Members
+                            </span>
+                            <span class="stat">
+                                <i class="fas fa-calendar"></i>
+                                Bi-weekly
+                            </span>
+                        </div>
+                        <button class="join-btn">
+                            <i class="fas fa-plus"></i>
+                            Join Club
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Science Club -->
+                <div class="club-card" data-category="academic">
+                    <div class="club-icon">
+                        <img src="photo/scienceclub.jpg" alt="Science Club" class="club-image">
+                    </div>
+                    <div class="club-info">
+                        <h3 class="club-name">Science Club</h3>
+                        <p class="club-description">Explore scientific concepts through hands-on experiments, research projects, and science fairs. Foster curiosity and innovation in various fields of science.</p>
+                        <div class="club-tags">
+                            <span class="tag academic">Experiments</span>
+                            <span class="tag academic">Research</span>
+                            <span class="tag academic">Innovation</span>
+                        </div>
+                        <div class="club-stats">
+                            <span class="stat">
+                                <i class="fas fa-users"></i>
+                                55+ Members
+                            </span>
+                            <span class="stat">
+                                <i class="fas fa-calendar"></i>
+                                Weekly
+                            </span>
+                        </div>
+                        <button class="join-btn">
+                            <i class="fas fa-plus"></i>
+                            Join Club
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Debate Club -->
+                <div class="club-card" data-category="academic">
+                    <div class="club-icon">
+                        <img src="photo/literaryclub.jpg" alt="Debate Club" class="club-image">
+                    </div>
+                    <div class="club-info">
+                        <h3 class="club-name">Debate Club</h3>
+                        <p class="club-description">Sharpen your critical thinking and public speaking skills through structured debates, discussions, and competitions. Learn to articulate ideas effectively and persuasively.</p>
+                        <div class="club-tags">
+                            <span class="tag academic">Public Speaking</span>
+                            <span class="tag academic">Critical Thinking</span>
+                            <span class="tag academic">Competition</span>
+                        </div>
+                        <div class="club-stats">
+                            <span class="stat">
+                                <i class="fas fa-users"></i>
+                                35+ Members
+                            </span>
+                            <span class="stat">
+                                <i class="fas fa-calendar"></i>
+                                Weekly
+                            </span>
+                        </div>
+                        <button class="join-btn">
+                            <i class="fas fa-plus"></i>
+                            Join Club
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Gavel Club -->
+                <div class="club-card" data-category="academic">
+                    <div class="club-icon">
+                        <img src="photo/mun.jpg" alt="Gavel Club" class="club-image">
+                    </div>
+                    <div class="club-info">
+                        <h3 class="club-name">Gavel Club</h3>
+                        <p class="club-description">Develop leadership and communication skills through Toastmasters-style meetings. Practice public speaking, leadership roles, and constructive evaluation in a supportive environment.</p>
+                        <div class="club-tags">
+                            <span class="tag academic">Leadership</span>
+                            <span class="tag academic">Communication</span>
+                            <span class="tag academic">Toastmasters</span>
+                        </div>
+                        <div class="club-stats">
+                            <span class="stat">
+                                <i class="fas fa-users"></i>
+                                20+ Members
+                            </span>
+                            <span class="stat">
+                                <i class="fas fa-calendar"></i>
+                                Bi-weekly
+                            </span>
+                        </div>
+                        <button class="join-btn">
+                            <i class="fas fa-plus"></i>
+                            Join Club
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Club Categories Filter -->
+            <div class="club-filters">
+                <h3>Filter by Category</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Clubs</button>
+                    <button class="filter-btn" data-filter="academic">Academic</button>
+                    <button class="filter-btn" data-filter="technology">Technology</button>
+                    <button class="filter-btn" data-filter="arts">Arts</button>
+                    <button class="filter-btn" data-filter="sports">Sports</button>
+                    <button class="filter-btn" data-filter="social">Social</button>
+                    <button class="filter-btn" data-filter="service">Service</button>
+                </div>
+            </div>
+
+            <!-- Join Information -->
+            <div class="join-info">
+                <h2>Ready to Join?</h2>
+                <p>Interested in joining any of our clubs? Contact our Student Activities Coordinator or visit the club during their meeting times. All students are welcome!</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>clubs@uniglobe.edu.np</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+977-1-4123450</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Student Activities Office, Ground Floor</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Uniglobe High School</h4>
+                    <p>Excellence in Education</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@uniglobe.edu.np</p>
+                    <p>Phone: +977-1-XXXXXXX</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Uniglobe High School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="uniglobe-script.js"></script>
+    <script src="clubs-script.js"></script>
+</body>
+</html>
